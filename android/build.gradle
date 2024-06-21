@@ -28,8 +28,13 @@ android {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+    if (project.android.hasProperty('namespace')) {
+        namespace "com.crazecoder.openfile"
     }
 }
 dependencies{
